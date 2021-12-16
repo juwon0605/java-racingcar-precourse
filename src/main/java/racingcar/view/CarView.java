@@ -19,7 +19,7 @@ public class CarView {
 		StringBuilder stringBuilder = new StringBuilder();
 
 		for (int i = 0; i < position; i++) {
-			stringBuilder.append("-");
+			stringBuilder.append(Message.LINE);
 		}
 
 		return stringBuilder.toString();
