@@ -1,10 +1,12 @@
 package racingcar.controller;
 
 import racingcar.model.RacingCarGame;
+import racingcar.model.Winner;
 import racingcar.service.RacingCarGameService;
 import racingcar.view.NamesView;
 import racingcar.view.ResultView;
 import racingcar.view.TheNumberOfView;
+import racingcar.view.WinnerView;
 
 public class RacingCarGameController {
 
@@ -27,5 +29,9 @@ public class RacingCarGameController {
 		resultView.print();
 
 		racingCarGame = racingCarGameService.playAsTheNumberOf(racingCarGame);
+
+		Winner winner = new Winner(racingCarGame.getCars());
+		WinnerView winnerView = new WinnerView();
+		winnerView.print(winner);
 	}
 }

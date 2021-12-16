@@ -27,6 +27,10 @@ public class RacingCarGame {
 
 	public void play() {
 
+		for (Car car : cars.getCars()) {
+			car.goOrStay();
+		}
+
 	}
 
 }
