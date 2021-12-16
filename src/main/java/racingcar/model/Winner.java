@@ -21,4 +21,8 @@ public class Winner {
 
 		this.winner = new Cars(winner);
 	}
+
+	public Names getNames() {
+		return winner.getNames();
+	}
 }

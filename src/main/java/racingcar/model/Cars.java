@@ -39,4 +39,14 @@ public class Cars {
 
 		return positionList;
 	}
+
+	public Names getNames() {
+		List<Name> names = new ArrayList<>();
+
+		for (Car car : cars) {
+			names.add(car.getName());
+		}
+
+		return new Names(names);
+	}
 }
