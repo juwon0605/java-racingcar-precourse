@@ -6,6 +6,9 @@ import java.util.List;
 
 import racingcar.constant.Message;
 import racingcar.constant.Rule;
+import racingcar.util.DuplicationChecker;
+import racingcar.util.SplitChecker;
+import racingcar.util.StringChecker;
 
 public class Names {
 
@@ -27,7 +30,17 @@ public class Names {
 	}
 
 	public void checkInput(String input) {
+		StringChecker stringChecker = new StringChecker();
+		stringChecker.isEmpty(input);
+		stringChecker.containSpace(input);
+		stringChecker.containTap(input);
 
+		SplitChecker splitChecker = new SplitChecker();
+		splitChecker.exceedMaxSplit(input, Rule.DELIMITER_NAME);
+		splitChecker.hasZeroLength(input, Rule.DELIMITER_NAME);
+
+		DuplicationChecker duplicationChecker = new DuplicationChecker();
+		duplicationChecker.isDuplication(Arrays.asList(input.split(Rule.DELIMITER_NAME)));
 	}
 
 	public List<Name> getNames() {
