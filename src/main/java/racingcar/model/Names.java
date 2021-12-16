@@ -8,7 +8,7 @@ import racingcar.constant.Rule;
 
 public class Names {
 
-	List<Name> names;
+	private List<Name> names;
 
 	public Names(String input) {
 		checkInput(input);
@@ -23,5 +23,9 @@ public class Names {
 
 	public void checkInput(String input) {
 
+	}
+
+	public List<Name> getNames() {
+		return names;
 	}
 }

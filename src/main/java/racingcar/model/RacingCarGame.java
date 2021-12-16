@@ -13,8 +13,8 @@ public class RacingCarGame {
 		cars = new Cars(names);
 	}
 
-	public int getTheNumberOf() {
-		return theNumberOf.get();
+	public boolean theNumberOfIsZero() {
+		return theNumberOf.isZero();
 	}
 
 	public void setTheNumberOf(TheNumberOf theNumberOf) {

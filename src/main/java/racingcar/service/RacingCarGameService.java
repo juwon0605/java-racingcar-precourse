@@ -10,7 +10,7 @@ public class RacingCarGameService {
 	public RacingCarGame playAsTheNumberOf(RacingCarGame racingCarGame) {
 		CarsView carsView = new CarsView();
 
-		while (racingCarGame.getTheNumberOf() > 0) {
+		while (!racingCarGame.theNumberOfIsZero()) {
 			racingCarGame.play();
 			racingCarGame.minusTheNumberOf();
 			carsView.print(racingCarGame.getCars());

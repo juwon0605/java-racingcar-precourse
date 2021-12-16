@@ -13,8 +13,13 @@ public class TheNumberOf {
 
 	}
 
-	public int get() {
-		return theNumberOf;
+	public boolean isZero() {
+
+		if (theNumberOf == 0) {
+			return true;
+		}
+
+		return false;
 	}
 
 	public void minus() {
