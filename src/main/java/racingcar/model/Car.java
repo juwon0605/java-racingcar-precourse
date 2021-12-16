@@ -11,6 +11,14 @@ public class Car {
 		this.name = name;
 	}
 
+	public Name getName() {
+		return name;
+	}
+
+	public int getPosition() {
+		return position;
+	}
+
 	public void goOrStay() {
 		int randomNumber = Randoms.pickNumberInRange(Rule.START_NUMBER_OF_RANGE, Rule.END_NUMBER_OF_RANGE);
 

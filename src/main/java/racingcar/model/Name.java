@@ -12,4 +12,8 @@ public class Name {
 	private void checkInput(String input) {
 
 	}
+
+	public String toString() {
+		return name;
+	}
 }
